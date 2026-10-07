@@ -43,12 +43,21 @@ static String prueba = "0123456789";
 		System.out.println("Todos los caracteres");
 		
 		for(int i = 0; i < length; i++){
-			char caracter = prueba.charAt(i);
-			System.out.println(caracter);
+			System.out.println( prueba.charAt(i) );
 		}
 	}
+	/** 
+	 * Muestra la palabra invertida
+	 */
 	public static void inversiva(){
-
+		int length = prueba.length();
+		System.out.println("PALABRA: " + prueba);
+		System.out.println("Inverso");
+		
+		for(int i = length - 1 ; i >= 0; i--){
+			System.out.print( prueba.charAt(i) );
+		}
+		System.out.println("");
 	}
 	public static void Cuarto(){
 
@@ -63,5 +72,6 @@ static String prueba = "0123456789";
 		menu();
 		longitud();
 		caracter();
+		inversiva();
 	}
 }
