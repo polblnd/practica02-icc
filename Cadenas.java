@@ -73,7 +73,11 @@ static String prueba = "0123456789";
 		System.out.println("La letra: \"" + letra + "\" \nApareció " + contador + " veces en el texto");
 	}
 	public static void Quinto(){
-
+		// Solicitar subcadena
+		// Purificar la subcadena y la cadena: trim(); ToLowerCase();
+		// Solicitar longitud de subcadena (i)
+		// Usar inderof(); en la cadena principal y subcadena
+		// metodo if(si inderof es -1 imprimir "No existe cadena") sino imprimir que esta contenida junto con el rango (i, subcadenalength)
 	}
 	public static void Sexto(){
 
