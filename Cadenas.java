@@ -70,7 +70,7 @@ static String prueba = "0123456789";
 			}
 		}
 
-		System.out.println("La letra: " + letra + "\nAparece " + contador + " en el texto");
+		System.out.println("La letra: \"" + letra + "\" \nApareció " + contador + " veces en el texto");
 	}
 	public static void Quinto(){
 
@@ -83,5 +83,6 @@ static String prueba = "0123456789";
 		longitud();
 		caracter();
 		inversiva();
+		Cuarto();
 	}
 }
