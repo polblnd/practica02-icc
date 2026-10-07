@@ -61,6 +61,10 @@ static String prueba = "0123456789";
 		}
 		System.out.println("");
 	}
+	/**
+	 * Te dice cuantas veces se repite
+	 * un caracter en una cadena
+	 */
 	public static void Cuarto(){
 		char letra = '1';
 		int contador = 0; 
