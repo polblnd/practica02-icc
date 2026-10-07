@@ -47,7 +47,9 @@ static String prueba = "0123456789";
 		}
 	}
 	/** 
-	 * Muestra la palabra invertida
+	 * Muestra la palabra invertida almacenando 
+	 * los caracteres de la misma con 
+	 * la instrucción charAt
 	 */
 	public static void inversiva(){
 		int length = prueba.length();
@@ -60,7 +62,15 @@ static String prueba = "0123456789";
 		System.out.println("");
 	}
 	public static void Cuarto(){
+		char letra = '1';
+		int contador = 0; 
+		for (int i = 0; i < prueba.length(); i++){
+			if ( prueba.charAt(i) == letra ) {
+				contador++;
+			}
+		}
 
+		System.out.println("La letra: " + letra + "\nAparece " + contador + " en el texto");
 	}
 	public static void Quinto(){
 
