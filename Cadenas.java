@@ -72,12 +72,24 @@ static String prueba = "0123456789";
 
 		System.out.println("La letra: \"" + letra + "\" \nApareció " + contador + " veces en el texto");
 	}
+	/**
+	 * Muestra si se encuentra una subcadena en el texto
+	 * junto a su posición
+	 */
 	public static void Quinto(){
-		// Solicitar subcadena
-		// Purificar la subcadena y la cadena: trim(); ToLowerCase();
-		// Solicitar longitud de subcadena (i)
-		// Usar inderof(); en la cadena principal y subcadena
-		// metodo if(si inderof es -1 imprimir "No existe cadena") sino imprimir que esta contenida junto con el rango (i, subcadenalength)
+			
+		String subcadena = "4";
+		subcadena = subcadena.trim().toLowerCase();
+		prueba = prueba.trim().toLowerCase();
+
+		int i = prueba.indexOf(subcadena);
+		int j = i + subcadena.length() - 1;
+		if(i == -1){
+		System.out.println("No se encontro la subcadena");
+		}
+		else{
+		System.out.println("Se encontro la subcadena: " + subcadena + " en la posición: (" + i + "," + j + ")");
+		}
 	}
 	public static void Sexto(){
 
@@ -88,5 +100,6 @@ static String prueba = "0123456789";
 		caracter();
 		inversiva();
 		Cuarto();
+		Quinto();
 	}
 }
