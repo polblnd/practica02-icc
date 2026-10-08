@@ -46,11 +46,36 @@ public class Civilizacion {
 			this.madera = madera;
 		}else {
 			this.madera = 0;
-		}if ( oro >= 0 ) {
+		}
+		if ( oro >= 0 ) {
 			this.oro = oro;
 		}else {
 			this.oro = 0;
 		}
-		
 	}
+		
+	public String getNombre() {
+			return nombre;
+		}
+	public void setNombre(String nombre) {
+			this.nombre = nombre;
+		}
+	public String getEra() {
+			return era;	
+		}
+	public void setEra(String era) {
+			this.era = era;
+		}	
+	public int getPoblacion() {
+			return poblacion;
+		}
+	public int getAlimento() {
+			return alimento;
+		}
+	public int getMadera() {
+			return madera;
+		}
+	public int getOro() {
+			return oro;
+		}	
 }
