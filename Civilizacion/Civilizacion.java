@@ -95,12 +95,15 @@ public class Civilizacion {
 		}
 
 	public void Estado(){
-		System.out.println("==========================");
-		System.out.println("        CIVILIZACION      ");
-		System.out.println("==========================");
-		System.out.println("==========================");
+		System.out.println("==========================================================");
+		System.out.println("                      CIVILIZACION                        ");
+		System.out.println("==========================================================");
+		System.out.println("==========================================================");
 		System.out.println("Civilización: " + nombre);
-
+		System.out.println("Era: " + era);
+		System.out.println("==========================================================");
+		System.out.println("Población (||||) Alimento (||||) Madera (||||) Oro (||||)");
+		System.out.println( poblacion + "(||||)" + alimento + "(||||)" + madera + "(||||)" + oro + "(||||)");
 	}
 
 	/**
