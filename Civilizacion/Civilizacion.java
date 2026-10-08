@@ -93,13 +93,44 @@ public class Civilizacion {
 			this.oro = oro;
 			}
 		}
+	/**
+     	* Suma una cantidad positiva de alimento a la reserva actual.
+     	* 
+     	* @param cantidad Cantidad de alimento a añadir (debe ser {@code > 0}).
+     	*/
+    	public void obtenerAlimento(int cantidad) {
+        	if (cantidad > 0) {
+            		this.alimento += cantidad;
+        		}
+    		}
+
+    	/**
+     	* Suma una cantidad positiva de madera a la reserva actual.
+     	* 
+     	* @param cantidad Cantidad de madera a añadir (debe ser {@code > 0}).
+     	*/
+    	public void obtenerMadera(int cantidad) {
+        	if (cantidad > 0) {
+            		this.madera += cantidad;
+        		}
+    		}
+
+    	/**
+     	* Suma una cantidad positiva de oro a la reserva actual.
+     	* 
+     	* @param cantidad Cantidad de oro a añadir (debe ser {@code > 0}).
+     	*/
+    	public void obtenerOro(int cantidad) {
+        	if (cantidad > 0) {
+            		this.oro += cantidad;
+        		}
+    		}
 
 	public void Estado(){
 		System.out.println("==========================================================");
-		System.out.println("                      CIVILIZACION                        ");
+		System.out.println("                  CIVILIZACION: " + nombre + "            ");
 		System.out.println("==========================================================");
 		System.out.println("==========================================================");
-		System.out.println("Civilización: " + nombre);
 		System.out.println("Era: " + era);
 		System.out.println("==========================================================");
 		System.out.println("Población (||||) Alimento (||||) Madera (||||) Oro (||||)");
