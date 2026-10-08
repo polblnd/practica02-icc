@@ -92,5 +92,35 @@ public class Civilizacion {
 		if (oro >= 0) {
 			this.oro = oro;
 			}
+		}
+
+	public void Estado(){
+		System.out.println("==========================");
+		System.out.println("        CIVILIZACION      ");
+		System.out.println("==========================");
+		System.out.println("==========================");
+		System.out.println("Civilización: " + nombre);
+
+	}
+
+	/**
+	 * Creación de aldeano
+	 * Un aldeano cuesta 50 unidades de alimento
+	 * Si la civilización posee suficiente alimento, reduce 50 unidades
+	 * de alimento e incrementa la población en 1
+	 *
+	 * @return {@code True} si el aldeano fue creado con éxito;
+	 * @return {@code False} si no había suficiente alimento;
+	 *
+	 */
+	public boolean Aldeano(){
+		if(this.alimento >= 50){
+			this.alimento = this.alimento - 50;
+			this.poblacion = this.poblacion + 1;
+			Estado(); 
+			return true;
+			}
+			System.out.println("No hay suficiente alimento para crear aldeano");
+			return false;
 	}
 }
