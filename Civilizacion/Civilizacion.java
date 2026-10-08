@@ -72,10 +72,25 @@ public class Civilizacion {
 	public int getAlimento() {
 			return alimento;
 		}
+	public void setAlimento(int alimento) {
+		if (alimento >= 0) {
+			this.alimento = alimento;
+			}
+		}
 	public int getMadera() {
 			return madera;
 		}
+	public void setMadera(int madera) {
+		if (madera >= 0) {
+			this.madera = madera;
+			}
+		}
 	public int getOro() {
 			return oro;
-		}	
+		}
+	public void setOro(int oro) {
+		if (oro >= 0) {
+			this.oro = oro;
+			}
+	}
 }
