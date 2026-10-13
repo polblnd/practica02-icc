@@ -1,10 +1,14 @@
+import java.util.Scanner;
+
+
 public class Cadenas{
 /**
  * Creamos variable de prueba
  * para comprobar que el código funciona
  * antes de añadir scanner
  */
-static String prueba = "0123456789";	
+private static String prueba;
+
 	public static void menu() {
 		System.out.println("\n====================================================");
 		System.out.println("\n                 MANEJO DE CADENAS                  ");
@@ -18,15 +22,10 @@ static String prueba = "0123456789";
             	"4. Contar apariciones de un carácter\n" +
             	"5. Buscar una subcadena\n" +
             	"6. Checar anagrama\n" +
-            	"=======================\n" +
-            	"Selecciona una opción: "
+            	"=======================\n "
         	);		
 
 	}
-	/**
-	 * Muestra la longitud de la cadena
-	 * almacenada en la variable de prueba
-	 */
 	public static void longitud() {
 		
 		int length = prueba.length();
@@ -65,8 +64,11 @@ static String prueba = "0123456789";
 	 * Te dice cuantas veces se repite
 	 * un caracter en una cadena
 	 */
-	public static void Cuarto(){
-		char letra = '1';
+	public static void Cuarto(Scanner scanner){
+		
+		System.out.println("Introduce el caracter");
+		char letra = scanner.next().charAt(0);
+
 		int contador = 0; 
 		for (int i = 0; i < prueba.length(); i++){
 			if ( prueba.charAt(i) == letra ) {
@@ -80,14 +82,17 @@ static String prueba = "0123456789";
 	 * Muestra si se encuentra una subcadena en el texto
 	 * junto a su posición
 	 */
-	public static void Quinto(){
-			
-		String subcadena = "4";
+	public static void Quinto(Scanner scanner){
+		
+		System.out.println("Introduce la subcadena a buscar: ");
+		String subcadena = scanner.nextLine();
+		
 		subcadena = subcadena.trim().toLowerCase();
 		prueba = prueba.trim().toLowerCase();
 
 		int i = prueba.indexOf(subcadena);
 		int j = i + subcadena.length() - 1;
+		
 		if(i == -1){
 		System.out.println("No se encontro la subcadena");
 		}
@@ -99,11 +104,43 @@ static String prueba = "0123456789";
 
 	}
 	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
 		menu();
-		longitud();
-		caracter();
-		inversiva();
-		Cuarto();
-		Quinto();
+		
+
+		System.out.println("Introduce tu cadena de texto: ");
+		prueba = scanner.nextLine();
+		
+		int opcion = 0;
+		do{
+			System.out.println("Selecciona una opción");
+			opcion = scanner.nextInt();
+			scanner.nextLine();
+
+			switch (opcion){
+				case 1:
+					longitud();
+					break;			
+				case 2:
+					caracter();
+					break;			
+				case 3:
+					inversiva();
+					break;			
+				case 4:
+					Cuarto(scanner);
+					break;			
+				case 5:
+					Quinto(scanner);
+					break;		
+				case 6:
+					System.out.println("Hola");
+					break;
+				default:
+					System.out.println("Opción no válida. Intenta de nuevo");
+					break;
+			}
+
+		}while(opcion < 0 || opcion > 6);
 	}
 }
